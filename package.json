@@ -1,0 +1,19 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "recipe application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleck156/forkify.git"
+  },
+  "author": "Aleksander Jaworski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleck156/forkify/issues"
+  },
+  "homepage": "https://github.com/aleck156/forkify#readme"
+}
