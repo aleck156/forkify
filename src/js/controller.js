@@ -18,7 +18,23 @@ const showRecipe = async function () {
       `https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886`
     );
     const resJSON = await res.json();
-    console.log(resJSON.data);
+    console.log(resJSON);
+    if (!res.ok) {
+      throw new Error(`${resJSON.message}`);
+    }
+
+    let { recipe } = resJSON.data;
+    recipe = {
+      id: recipe.id,
+      title: recipe.title,
+      publisher: recipe.publisher,
+      sourceURL: recipe.source_url,
+      image: recipe.image_url,
+      servings: recipe.servings,
+      cookingTime: recipe.cooking_time,
+    };
+
+    console.log(recipe);
   } catch (error) {
     alert(error);
   }
