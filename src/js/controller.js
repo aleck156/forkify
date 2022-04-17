@@ -30,9 +30,8 @@ const renderSpinner = function (parentEl) {
 
 const showRecipe = async function () {
   try {
-    const recipeID = window.location.hash.slice(1);
-    console.log(recipeID);
     // 1) loading recipee
+    const recipeID = window.location.hash.slice(1);
     renderSpinner(recipeContainer);
     const res = await fetch(
       // `https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886`
