@@ -42,10 +42,6 @@ const showRecipe = async function () {
 
     // 2) rendering recipee
     recipeView.render(model.state.recipe);
-
-    // recipeContainer.innerHTML = markup;
-    recipeContainer.innerHTML = '';
-    recipeContainer.insertAdjacentHTML('afterbegin', markup);
   } catch (error) {
     alert(error);
   }
