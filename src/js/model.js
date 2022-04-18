@@ -14,8 +14,8 @@ export const loadRecipe = async function (id) {
       throw new Error(`${resJSON.message}`);
     }
 
-    let { recipe } = resJSON.data;
-    recipe = {
+    const { recipe } = resJSON.data;
+    state.recipe = {
       id: recipe.id,
       title: recipe.title,
       publisher: recipe.publisher,
@@ -25,5 +25,6 @@ export const loadRecipe = async function (id) {
       cookingTime: recipe.cooking_time,
       ingredients: recipe.ingredients,
     };
+    console.log(state.recipe);
   } catch (error) {}
 };
