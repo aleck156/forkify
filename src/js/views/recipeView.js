@@ -6,8 +6,12 @@ class RecipeView {
     this.#data = data;
     const markup = this.#generateMarkup();
 
-    recipeContainer.innerHTML = '';
-    recipeContainer.insertAdjacentHTML('afterbegin', markup);
+    this.#clear();
+    this.#parentElement.insertAdjacentHTML('afterbegin', markup);
+  }
+
+  #clear() {
+    this.#parentElement.innerHTML = '';
   }
 
   #generateMarkup() {
