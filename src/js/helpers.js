@@ -5,5 +5,7 @@ export const getJSON = async function (url) {
     if (!res.ok) {
       throw new Error(`${resJSON.message}`);
     }
+
+    return resJSON;
   } catch (error) {}
 };
