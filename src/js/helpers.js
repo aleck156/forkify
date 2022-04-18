@@ -7,5 +7,7 @@ export const getJSON = async function (url) {
     }
 
     return resJSON;
-  } catch (error) {}
+  } catch (error) {
+    throw error;
+  }
 };
