@@ -1,3 +1,5 @@
+import icons from '../../img/icons.svg';
+
 class RecipeView {
   #parentElement = document.querySelector('.recipe');
   #data;

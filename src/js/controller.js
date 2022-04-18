@@ -1,6 +1,5 @@
 import * as model from './model';
 import recipeView from './views/recipeView';
-import icons from '../img/icons.svg';
 import 'core-js';
 import 'regenerator-runtime/runtime';
 
