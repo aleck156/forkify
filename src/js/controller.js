@@ -3,8 +3,6 @@ import recipeView from './views/recipeView';
 import 'core-js';
 import 'regenerator-runtime/runtime';
 
-const recipeContainer = document.querySelector('.recipe');
-
 const timeout = function (s) {
   return new Promise(function (_, reject) {
     setTimeout(function () {
@@ -19,7 +17,7 @@ const timeout = function (s) {
 
 const controlRecipes = async function () {
   try {
-    recipeView.renderSpinner(recipeContainer);
+    recipeView.renderSpinner();
     // 1) loading recipee
     const id = window.location.hash.slice(1);
 
