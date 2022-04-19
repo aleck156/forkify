@@ -33,8 +33,6 @@ const controlSearchResults = async function () {
     if (!query) return;
     console.log(query);
 
-    searchView.clearInput();
-
     await model.loadSearchResults(query);
     console.log(model.state.search.results);
   } catch (error) {
