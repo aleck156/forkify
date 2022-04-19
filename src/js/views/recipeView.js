@@ -25,7 +25,7 @@ class RecipeView {
         </svg>
       </div>
     `;
-    this.#parentElement.innerHTML = '';
+    this.#clear();
     this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
@@ -34,12 +34,14 @@ class RecipeView {
       <div class="error">
         <div>
           <svg>
-            <use href="src/img/icons.svg#icon-alert-triangle"></use>
+            <use href="${icons}#icon-alert-triangle"></use>
           </svg>
         </div>
-        <p>No recipes found for your query. Please try again!</p>
+        <p>${message}</p>
       </div>
     `;
+    this.#clear();
+    this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
   addHandlerRender(handler) {
