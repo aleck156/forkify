@@ -14,7 +14,6 @@ class SearchView {
       e.preventDefault();
       console.log(e);
       handler();
-      this.clearInput();
     });
   }
 }
