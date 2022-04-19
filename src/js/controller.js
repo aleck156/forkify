@@ -27,6 +27,7 @@ const controlRecipes = async function () {
 
 const controlSearchResults = async function () {
   try {
+    await model.loadSearchResults(`pizza`);
   } catch (error) {
     console.log(error);
   }
@@ -34,6 +35,7 @@ const controlSearchResults = async function () {
 
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
+  controlSearchResults();
 };
 
 init();

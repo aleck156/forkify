@@ -52,5 +52,3 @@ export const loadSearchResults = async function (query) {
     throw error;
   }
 };
-
-loadSearchResults('pizza');
