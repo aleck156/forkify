@@ -29,6 +29,7 @@ export const loadRecipe = async function (id) {
 
 export const loadSearchResults = async function (query) {
   try {
+    const data = await getJSON(`${API_URL}?search=${query}`);
   } catch (error) {
     console.log(`[loadSearchResults]: ${error.message}`);
     throw error;
