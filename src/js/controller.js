@@ -3,6 +3,7 @@ import recipeView from './views/recipeView';
 import searchView from './views/searchView';
 import 'core-js';
 import 'regenerator-runtime/runtime';
+import { search } from 'core-js/fn/symbol';
 
 // https://forkify-api.herokuapp.com/v2
 
@@ -28,6 +29,7 @@ const controlRecipes = async function () {
 
 const controlSearchResults = async function () {
   try {
+    const query = searchView.getQuery();
     await model.loadSearchResults(`pizza`);
 
     console.log(model.state.search.results);
