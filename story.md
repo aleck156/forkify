@@ -46,7 +46,7 @@
 5. Components of any architecture
    1. Business Logic
       - solves business problem
-      - directly related to what business does and wwhat it needs
+      - directly related to what business does and what it needs
    2. State management
       - stores all the data about the application
       - should be the **single source of truth**
@@ -81,3 +81,7 @@
         - controls and orchestrates this entire action
         - the only place where functions and methods are called
       - bridge between model and view
+   - events should be handled in the controller
+     - otherwise we would have application logic in the view
+   - events should be listened for in the view
+     - otherwise, we would need DOM eleemnts in the controller
