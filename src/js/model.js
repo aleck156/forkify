@@ -26,3 +26,11 @@ export const loadRecipe = async function (id) {
     throw error;
   }
 };
+
+export const loadSearchResults = async function (query) {
+  try {
+  } catch (error) {
+    console.log(`[loadSearchResults]: ${error.message}`);
+    throw error;
+  }
+};
