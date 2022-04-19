@@ -24,4 +24,8 @@ const controlRecipes = async function () {
   }
 };
 
-recipeView.addHandlerRender(controlRecipes);
+const init = function () {
+  recipeView.addHandlerRender(controlRecipes);
+};
+
+init();
