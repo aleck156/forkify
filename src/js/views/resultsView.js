@@ -13,13 +13,13 @@ class ResultsView extends View {
   _generateMarkupPreview(recipe) {
     return `
       <li class="preview">
-        <a class="preview__link preview__link--active" href="#23456">
+        <a class="preview__link preview__link--active" href="#${recipe.id}">
           <figure class="preview__fig">
-            <img src="src/img/test-1.jpg" alt="Test" />
+            <img src="${recipe.image}" alt="Test" />
           </figure>
           <div class="preview__data">
-            <h4 class="preview__title">Pasta with Tomato Cream ...</h4>
-            <p class="preview__publisher">The Pioneer Woman</p>
+            <h4 class="preview__title">${recipe.title}</h4>
+            <p class="preview__publisher">${recipe.publisher}</p>
             <div class="preview__user-generated">
               <svg>
                 <use href="${icons}#icon-user"></use>
