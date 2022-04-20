@@ -4,12 +4,9 @@ import icons from '../../img/icons.svg';
 class ResultsView extends View {
   _parentElement = document.querySelector('.results');
 
-  render(data) {
-    console.log(data);
-  }
-
   _generateMarkup() {
-    const markup = `
+    console.log(this._data);
+    return `
       <li class="preview">
         <a class="preview__link preview__link--active" href="#23456">
           <figure class="preview__fig">
