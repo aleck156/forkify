@@ -3,7 +3,7 @@ import icons from '../../img/icons.svg';
 
 class ResultsView extends View {
   _parentElement = document.querySelector('.results');
-  _errorMessage = `Zero recipes found!`;
+  _errorMessage = `Zero recipes found! Please try again ...`;
   _message = ``;
 
   _generateMarkup() {
