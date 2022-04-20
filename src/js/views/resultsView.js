@@ -7,9 +7,7 @@ class ResultsView extends View {
   _generateMarkup() {
     console.log(this._data);
 
-    return this._data
-      .map(recipe => this._generateMarkupPreview(recipe))
-      .join('\n');
+    return this._data.map(this._generateMarkupPreview).join('\n');
   }
 
   _generateMarkupPreview(recipe) {
