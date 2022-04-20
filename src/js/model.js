@@ -53,7 +53,7 @@ export const loadSearchResults = async function (query) {
   }
 };
 
-export const getSearchResultsPage = function (page) {
+export const getSearchResultsPage = function (page = state.search.page) {
   if (!Number.isInteger(page) || page < 0) return;
 
   state.search.page = page;
