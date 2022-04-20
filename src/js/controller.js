@@ -1,9 +1,9 @@
 import * as model from './model';
 import recipeView from './views/recipeView';
 import searchView from './views/searchView';
+import resultsView from './views/resultsView';
 import 'core-js';
 import 'regenerator-runtime/runtime';
-import { search } from 'core-js/fn/symbol';
 
 // https://forkify-api.herokuapp.com/v2
 
