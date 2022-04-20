@@ -17,7 +17,7 @@ class ResultsView extends View {
             <p class="preview__publisher">The Pioneer Woman</p>
             <div class="preview__user-generated">
               <svg>
-                <use href="src/img/icons.svg#icon-user"></use>
+                <use href="${icons}#icon-user"></use>
               </svg>
             </div>
           </div>
