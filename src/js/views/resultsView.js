@@ -1,7 +1,12 @@
 import View from './View';
+import icons from '../../img/icons.svg';
 
 class ResultsView extends View {
   _parentElement = document.querySelector('.results');
+
+  render(data) {
+    console.log(data);
+  }
 
   _generateMarkup() {
     const markup = `
