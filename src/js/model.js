@@ -50,3 +50,10 @@ export const loadSearchResults = async function (query) {
     throw error;
   }
 };
+
+export const getSearchResultsPage = function (page) {
+  if (!Number.isInteger(page) || page < 0) return;
+  const start = (page - 1) * 10;
+  const end = page * 10;
+  return state.search.results.slice(start, end);
+};
