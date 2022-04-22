@@ -31,11 +31,14 @@ const controlSearchResults = async function () {
   try {
     resultsView.renderSpinner();
 
+    // 1) get search query
     const query = searchView.getQuery();
     if (!query) return;
-    console.log(query);
 
+    // 2) load search results
     await model.loadSearchResults(query);
+
+    // 3) render results
     resultsView.render(model.getSearchResultsPage(2));
   } catch (error) {
     console.log(error);
