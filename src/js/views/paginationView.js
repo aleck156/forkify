@@ -10,7 +10,7 @@ class PaginationView extends View {
    * @param {Number} curPage    set the number of current page
    * @returns
    */
-  _button(direction, curPage) {
+  _generateMarkupButton(direction, curPage) {
     return `
       <button class="btn--inline pagination__btn--${
         direction === 'right' ? 'next' : 'prev'
@@ -33,17 +33,20 @@ class PaginationView extends View {
     console.log(this);
     // page 1, and theere are other pages
     if (curPage === 1 && numPages > 1) {
-      return this._button('right', curPage);
+      return this._generateMarkupButton('right', curPage);
     }
 
     // last page, no pages left
     if (curPage === numPages) {
-      return this._button('left', curPage);
+      return this._generateMarkupButton('left', curPage);
     }
 
     // mid page
     if (curPage < numPages) {
-      return this._button('left', curPage) + this._button('right', curPage);
+      return (
+        this._generateMarkupButton('left', curPage) +
+        this._generateMarkupButton('right', curPage)
+      );
     }
 
     // page 1, but no other pages
