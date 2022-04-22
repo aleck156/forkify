@@ -4,8 +4,14 @@ import icons from '../../img/icons.svg';
 class PaginationView extends View {
   _parentElement = document.querySelector('.pagination');
 
+  addHandlerClick(handler) {
+    this._parentElement.addEventListener('click', function (e) {
+      // when event bubbling a click, grab the first parent with btn--inline class
+      const btn = e.target.closest('.btn--inline');
+    });
+  }
+
   /**
-   *
    * @param {'left', 'right'} direction set in which direction the button will point toward
    * @param {Number} curPage    set the number of current page
    * @returns
