@@ -43,8 +43,6 @@ class PaginationView extends View {
     );
     const curPage = this._data.page;
 
-    console.log(numPages);
-    console.log(this);
     // page 1, and theere are other pages
     if (curPage === 1 && numPages > 1) {
       return this._generateMarkupButton('right', curPage);
