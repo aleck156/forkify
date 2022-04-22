@@ -49,10 +49,11 @@ const controlSearchResults = async function () {
   }
 };
 
+const controlPagination = paginationView.addHandlerClick();
+
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   searchView.addHandlerSearch(controlSearchResults);
-  controlSearchResults();
 };
 
 init();
