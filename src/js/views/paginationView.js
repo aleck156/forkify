@@ -8,6 +8,7 @@ class PaginationView extends View {
     this._parentElement.addEventListener('click', function (e) {
       // when event bubbling a click, grab the first parent with btn--inline class
       const btn = e.target.closest('.btn--inline');
+      if (!btn) return;
 
       const goToPage = +btn.dataset.goto;
       console.log(goToPage);
