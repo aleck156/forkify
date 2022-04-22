@@ -15,14 +15,19 @@ class PaginationView extends View {
       return `page 1 and others`;
     }
 
-    // page 1, but no other pages
-
     // last page, no pages left
     if (this._data.page === numPages) {
       return `last and others`;
     }
 
     // mid page
+    if (this._data.page < numPages) {
+      return `other pages`;
+    }
+
+    // page 1, but no other pages
+    return `only 1 page`;
+
     const markup = `
     
     `;
