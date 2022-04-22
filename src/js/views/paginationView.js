@@ -8,7 +8,8 @@ class PaginationView extends View {
     this._parentElement.addEventListener('click', function (e) {
       // when event bubbling a click, grab the first parent with btn--inline class
       const btn = e.target.closest('.btn--inline');
-      console.log(btn);
+      console.log(btn.dataset.goto);
+
       handler();
     });
   }
@@ -19,11 +20,13 @@ class PaginationView extends View {
    * @returns
    */
   _generateMarkupButton(direction, curPage) {
+    const dispPage = direction == 'right' ? curPage + 1 : curPage - 1;
     return `
-      <button class="btn--inline pagination__btn--${
+      <button data-goto="${dispPage}"
+      class="btn--inline pagination__btn--${
         direction === 'right' ? 'next' : 'prev'
       }">
-        <span>Page ${direction == 'right' ? curPage + 1 : curPage - 1}</span>
+        <span>Page ${dispPage}</span>
         <svg class="search__icon">
           <use href="${icons}#icon-arrow-${direction}"></use>
         </svg>
