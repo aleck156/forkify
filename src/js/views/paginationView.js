@@ -14,7 +14,14 @@ class PaginationView extends View {
     console.log(this);
     // page 1, and theere are other pages
     if (curPage === 1 && numPages > 1) {
-      return `page 1 and others`;
+      return `
+      <button class="btn--inline pagination__btn--next">
+        <span>Page ${curPage + 1}</span>
+        <svg class="search__icon">
+          <use href="${icons}#icon-arrow-right"></use>
+        </svg>
+      </button>
+      `;
     }
 
     // last page, no pages left
