@@ -49,8 +49,8 @@ const controlSearchResults = async function () {
   }
 };
 
-const controlPagination = function () {
-  console.log(`pagination controller activated`);
+const controlPagination = function (goToPage) {
+  console.log(`pagination controller activated: ${goToPage}`);
 };
 
 const init = function () {
