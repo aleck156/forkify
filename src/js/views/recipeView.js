@@ -14,7 +14,13 @@ class RecipeView extends View {
     );
   }
 
-  addHandlerUpdateServings(handler) {}
+  addHandlerUpdateServings(handler) {
+    // event delegation
+    this._parentElement.addEventListener('click', function (e) {
+      const btn = e.target.closest('.btn--tiny');
+      console.log(btn);
+    });
+  }
 
   _generateMarkup() {
     return `
