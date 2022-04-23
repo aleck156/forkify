@@ -18,7 +18,10 @@ class RecipeView extends View {
     // event delegation
     this._parentElement.addEventListener('click', function (e) {
       const btn = e.target.closest('.btn--tiny');
-      console.log(btn);
+      if (!btn) return;
+      // console.log(btn.classList.);
+      // const currentServings =
+      // btn.classList.contains('btn--increase-servings') ? handler() : handler()
     });
   }
 
