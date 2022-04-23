@@ -14,6 +14,8 @@ class RecipeView extends View {
     );
   }
 
+  addHandlerUpdateServings(handler) {}
+
   _generateMarkup() {
     return `
         <figure class="recipe__fig">
