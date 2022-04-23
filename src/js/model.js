@@ -61,4 +61,10 @@ export const getSearchResultsPage = function (page = state.search.page) {
   return state.search.results.slice(start, end);
 };
 
-export const updateServings = function (newServings) {};
+export const updateServings = function (newServings) {
+  // side effects! you should create new object with ingredients quantity update
+  state.recipe.ingredients.forEach(ing => {
+    ing.quantity *= newServings / state.recipe.servings;
+  });
+  state.recipe.servings = newServings;
+};
