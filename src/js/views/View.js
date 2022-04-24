@@ -31,9 +31,13 @@ export default class View {
 
     newElements.forEach((newEl, i) => {
       const curEl = curElements[i];
-      console.log(curEl, newEl, newEl.isEqualNode(curEl));
+      // console.log(curEl, newEl, newEl.isEqualNode(curEl));
 
-      if (!newEl.isEqualNode(curEl)) {
+      if (
+        !newEl.isEqualNode(curEl) &&
+        newEl.firstChild.nodeValue.textContent.trim() !=
+          curEl.firstChild.nodeValue.textContent.trim()
+      ) {
         curEl.textContent = newEl.textContent;
       }
     });
