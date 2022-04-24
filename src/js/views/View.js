@@ -37,6 +37,8 @@ export default class View {
         curEl.textContent = newEl.textContent;
       }
     });
+    this._clear();
+    this._parentElement.insertAdjacentHTML('afterbegin', newMarkup);
   }
 
   renderSpinner() {
