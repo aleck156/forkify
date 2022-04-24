@@ -35,7 +35,7 @@ export default class View {
 
       if (
         !newEl.isEqualNode(curEl) &&
-        newEl.firstChild.nodeValue.textContent !== ''
+        newEl.firstChild?.nodeValue.textContent?.trim() !== ''
       ) {
         curEl.textContent = newEl.textContent;
       }
