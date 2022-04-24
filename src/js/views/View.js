@@ -18,6 +18,8 @@ export default class View {
     this._parentElement.innerHTML = '';
   }
 
+  update(data) {}
+
   renderSpinner() {
     const markup = `
       <div class="spinner">

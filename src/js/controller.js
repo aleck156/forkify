@@ -65,7 +65,10 @@ const controlServings = function (newServings) {
   model.updateServings(newServings);
 
   // update the recipe view
-  recipeView.render(model.state.recipe);
+  // recipeView.render(model.state.recipe);
+  // we don't want to re-render an entire element, just a test part of it
+  // in order to optimize reloading
+  recipeView.update(model.state.recipe);
 };
 
 const init = function () {
