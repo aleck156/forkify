@@ -13,6 +13,10 @@ import 'regenerator-runtime/runtime';
 const controlRecipes = async function () {
   try {
     recipeView.renderSpinner();
+
+    // 0) update results view to mark selected search recipe
+    resultsView.update(model.getSearchResultsPage());
+
     // 1) loading recipee
     const id = window.location.hash.slice(1);
 
