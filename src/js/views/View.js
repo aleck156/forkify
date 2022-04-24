@@ -33,14 +33,23 @@ export default class View {
       const curEl = curElements[i];
       // console.log(curEl, newEl, newEl.isEqualNode(curEl));
 
+      // update changed text
       if (
         !newEl.isEqualNode(curEl) &&
         newEl.firstChild?.nodeValue.textContent?.trim() !== ''
       ) {
         curEl.textContent = newEl.textContent;
       }
+
+      // update changed attributes
+      if (!newEl.isEqualNode(curEl)) {
+        Array.from(newEl.attributes).forEach(attr =>
+          curEl.setAttribute(attr.name, attr.value)
+        );
+      }
     });
-    this._clear();
+
+    // this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', newMarkup);
   }
 
