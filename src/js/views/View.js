@@ -49,7 +49,7 @@ export default class View {
       }
     });
 
-    // this._clear();
+    this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', newMarkup);
   }
 
