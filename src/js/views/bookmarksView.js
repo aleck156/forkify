@@ -3,7 +3,7 @@ import icons from '../../img/icons.svg';
 
 class BookmarksView extends View {
   _parentElement = document.querySelector('.bookmarks__list');
-  _errorMessage = `Zero recipes found! Please try again ...`;
+  _errorMessage = `No bookmarks yet ...`;
   _message = ``;
 
   _generateMarkup() {
