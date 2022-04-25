@@ -87,9 +87,17 @@ export const addBookmark = function (recipe) {
 };
 
 export const deleteBookmark = function (id) {
+  // find an index of that recipe in bookmarks
   const index = state.bookmarks.findIndex(el => el.id === id);
 
+  // return when nothing found
   if (!index) return;
 
+  // remove bookmark prop
+  if (recipe.id === state.recipe.id) {
+    state.recipe.bookmarked = false;
+  }
+
+  // remove that recipe from bookmarks
   state.bookmarks.splice(index, 1);
 };
