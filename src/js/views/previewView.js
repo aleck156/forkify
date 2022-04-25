@@ -2,14 +2,9 @@ import View from './View';
 import icons from '../../img/icons.svg';
 
 class PreviewView {
-  _parentElement = document.querySelector('.bookmarks__list');
+  _parentElement = '';
 
   _generateMarkup() {
-    console.log(this._data);
-    return this._data.map(this._generateMarkupPreview).join('\n');
-  }
-
-  _generateMarkupPreview(recipe) {
     const id = window.location.hash.slice(1);
 
     return `
