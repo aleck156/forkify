@@ -1,7 +1,7 @@
 import View from './View';
 import icons from '../../img/icons.svg';
 
-class ResultsView extends View {
+class BookmarksView extends View {
   _parentElement = document.querySelector('.results');
   _errorMessage = `Zero recipes found! Please try again ...`;
   _message = ``;
@@ -14,21 +14,21 @@ class ResultsView extends View {
     const id = window.location.hash.slice(1);
 
     return `
-      <li class="preview">
-        <a class="preview__link ${
-          recipe.id === id ? 'preview__link--active' : ''
-        }" href="#${recipe.id}">
-          <figure class="preview__fig">
-            <img src="${recipe.image}" alt="${recipe.title}" />
-          </figure>
-          <div class="preview__data">
-            <h4 class="preview__title">${recipe.title}</h4>
-            <p class="preview__publisher">${recipe.publisher}</p>
-          </div>
-        </a>
-      </li>
+        <li class="preview">
+          <a class="preview__link" href="#23456">
+            <figure class="preview__fig">
+              <img src="src/img/test-1.jpg" alt="Test" />
+            </figure>
+            <div class="preview__data">
+              <h4 class="preview__name">
+                Pasta with Tomato Cream ...
+              </h4>
+              <p class="preview__publisher">The Pioneer Woman</p>
+            </div>
+          </a>
+        </li>
       `;
   }
 }
 
-export default new ResultsView();
+export default new BookmarksView();
