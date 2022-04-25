@@ -85,7 +85,6 @@ const controlAddBookmark = function () {
     model.deleteBookmark(model.state.recipe.id);
   }
 
-  console.log(model.state.recipe);
   recipeView.update(model.state.recipe);
 };
 
