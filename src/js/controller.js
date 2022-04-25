@@ -76,7 +76,10 @@ const controlServings = function (newServings) {
 };
 
 const controlAddBookmark = function () {
-  model.addBookmark(model.state.recipe);
+  if (!model.state.recipe.addBookmark) model.addBookmark(model.state.recipe);
+  if (model.state.recipe.addBookmark)
+    model.deleteBookmark(model.state.recipe.id);
+
   console.log(model.state.recipe);
   recipeView.update(model.state.recipe);
 };
