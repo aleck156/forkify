@@ -94,7 +94,7 @@ export const deleteBookmark = function (id) {
   if (!index) return;
 
   // remove bookmark prop
-  if (recipe.id === state.recipe.id) {
+  if (id === state.recipe.id) {
     state.recipe.bookmarked = false;
   }
 
