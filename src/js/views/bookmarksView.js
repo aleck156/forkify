@@ -16,15 +16,15 @@ class BookmarksView extends View {
 
     return `
         <li class="preview">
-          <a class="preview__link" href="#23456">
+          <a class="preview__link" href="#${recipe.id}">
             <figure class="preview__fig">
-              <img src="src/img/test-1.jpg" alt="Test" />
+              <img src="${recipe.image}" alt="${recipe.title}" />
             </figure>
             <div class="preview__data">
               <h4 class="preview__name">
-                Pasta with Tomato Cream ...
+                ${recipe.title}
               </h4>
-              <p class="preview__publisher">The Pioneer Woman</p>
+              <p class="preview__publisher">${recipe.publisher}</p>
             </div>
           </a>
         </li>
