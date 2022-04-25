@@ -7,6 +7,7 @@ class BookmarksView extends View {
   _message = ``;
 
   _generateMarkup() {
+    console.log();
     return this._data.map(this._generateMarkupPreview).join('\n');
   }
 
