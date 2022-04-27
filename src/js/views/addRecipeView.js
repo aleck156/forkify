@@ -12,8 +12,10 @@ class AddRecipeView extends View {
   _btnClose = document.querySelector('.btn--close-modal');
   _btnUpload = document.querySelector('.upload__btn');
 
-  addHandlerRender(handler) {
-    window.addEventListener('load', handler);
+  addHandlerShowWindow() {
+    this._btnOpen.addEventListener('click', function () {
+      this._overlay.classList.toggle('hidden');
+    });
   }
 
   _generateMarkup() {}
