@@ -110,14 +110,14 @@ export const deleteBookmark = function (id) {
 };
 
 const init = function () {
-  const localBookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+  const localBookmarks = localStorage.getItem('bookmarks');
   if (!localBookmarks) {
     console.log('No bookmarks found locally.');
     return;
   }
 
   console.log(`loading bookmarks from local storage ...`);
-  console.log(localBookmarks);
+  state.bookmarks = JSON.parse(localBookmarks);
 };
 
 init();
