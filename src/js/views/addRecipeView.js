@@ -16,7 +16,7 @@ class AddRecipeView extends View {
     super();
     this._addHandlerShowWindow();
     this._addHandlerCloseWindow();
-    this._addHandlerUpload();
+    this.addHandlerUpload();
   }
 
   toggleWindow() {
@@ -33,7 +33,7 @@ class AddRecipeView extends View {
     this._overlay.addEventListener('click', this.toggleWindow.bind(this));
   }
 
-  _addHandlerUpload() {
+  addHandlerUpload() {
     this._parentElement.addEventListener('submit', function (e) {
       e.preventDefault();
       const data = [...new FormData(this)];

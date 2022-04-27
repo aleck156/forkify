@@ -99,14 +99,19 @@ const controlBookmarks = function () {
   bookmarksView.render(model.state.bookmarks);
 };
 
+const controlAddRecipe = function (newRecipe) {
+  console.log(newRecipe);
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerAddBookmark(controlAddBookmark);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
-  controlSearchResults();
+  // controlSearchResults();
   recipeView.addHandlerUpdateServings(controlServings);
+  addRecipeView.addHandlerUpload(controlAddRecipe);
 };
 
 init();
