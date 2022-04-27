@@ -15,6 +15,7 @@ class AddRecipeView extends View {
   constructor() {
     super();
     this._addHandlerShowWindow();
+    this._addHandlerCloseWindow();
   }
 
   toggleWindow() {
@@ -24,6 +25,10 @@ class AddRecipeView extends View {
 
   _addHandlerShowWindow() {
     this._btnOpen.addEventListener('click', this.toggleWindow.bind(this));
+  }
+
+  _addHandlerCloseWindow() {
+    this._btnClose.addEventListener('click', this.toggleWindow.bind(this));
   }
 
   _generateMarkup() {}
