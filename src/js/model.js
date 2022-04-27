@@ -108,3 +108,11 @@ export const deleteBookmark = function (id) {
 
   persistBookmarks();
 };
+
+const init = function () {
+  const localBookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+  console.log(`loading bookmarks from local storage ...`);
+  console.log(localBookmarks);
+};
+
+init();
