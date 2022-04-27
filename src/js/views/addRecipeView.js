@@ -9,11 +9,7 @@ class AddRecipeView extends View {
     window.addEventListener('load', handler);
   }
 
-  _generateMarkup() {
-    return this._data
-      .map(bookmark => previewView.render(bookmark, false))
-      .join('\n');
-  }
+  _generateMarkup() {}
 }
 
 export default new AddRecipeView();
