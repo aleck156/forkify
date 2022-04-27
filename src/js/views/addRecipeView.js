@@ -16,6 +16,7 @@ class AddRecipeView extends View {
     super();
     this._addHandlerShowWindow();
     this._addHandlerCloseWindow();
+    this._addHandlerUpload();
   }
 
   toggleWindow() {
@@ -30,6 +31,14 @@ class AddRecipeView extends View {
   _addHandlerCloseWindow() {
     this._btnClose.addEventListener('click', this.toggleWindow.bind(this));
     this._overlay.addEventListener('click', this.toggleWindow.bind(this));
+  }
+
+  _addHandlerUpload() {
+    this._parentElement.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const data = [...new FormData(this)];
+      console.log(data);
+    });
   }
 
   _generateMarkup() {}
