@@ -126,4 +126,4 @@ const clearBookmarks = function () {
   localStorage.clear('bookmarks');
 };
 
-clearBookmarks();
+// clearBookmarks();
