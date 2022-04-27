@@ -15,16 +15,16 @@ import { async } from 'regenerator-runtime/runtime';
 
 const controlRecipes = async function () {
   try {
-    recipeView.renderSpinner();
-
     // 0) update results view to mark selected search recipe
     resultsView.update(model.getSearchResultsPage());
+
     bookmarksView.update(model.state.bookmarks);
 
     // 1) loading recipee
     const id = window.location.hash.slice(1);
 
     if (!id) return;
+    recipeView.renderSpinner();
 
     await model.loadRecipe(id);
 
@@ -39,13 +39,12 @@ const controlRecipes = async function () {
 
 const controlSearchResults = async function () {
   try {
-    resultsView.renderSpinner();
-
     // 1) get search query
     const query = searchView.getQuery();
     if (!query) return;
 
     // 2) load search results
+    resultsView.renderSpinner();
     await model.loadSearchResults(query);
 
     // 3) render results
