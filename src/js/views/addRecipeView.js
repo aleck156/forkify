@@ -3,9 +3,7 @@ import previewView from './previewView';
 import icons from '../../img/icons.svg';
 
 class AddRecipeView extends View {
-  _parentElement = document.querySelector('.bookmarks__list');
-  _errorMessage = `No bookmarks yet ...`;
-  _message = ``;
+  _parentElement = document.querySelector('.upload');
 
   addHandlerRender(handler) {
     window.addEventListener('load', handler);
