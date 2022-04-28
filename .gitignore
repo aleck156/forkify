@@ -1,6 +1,6 @@
+src/js/keys.js
 .prettierrc
 node_modules/
 .parcel-cache/
 .cache
 dist
-src/js/keys.js
