@@ -129,7 +129,6 @@ const clearBookmarks = function () {
 // clearBookmarks();
 
 export const uploadRecipe = async function (newRecipe) {
-  console.log(newRecipe);
   try {
     const ingredients = Object.entries(newRecipe)
       .filter(entry => entry[0].startsWith('ingredient') && entry[1] !== '')
@@ -145,7 +144,6 @@ export const uploadRecipe = async function (newRecipe) {
           description,
         };
       });
-    console.log(ingredients);
     const recipe = {
       title: newRecipe.title,
       source_url: newRecipe.sourceURL,
@@ -155,7 +153,8 @@ export const uploadRecipe = async function (newRecipe) {
       servings: +newRecipe.servings,
       ingredients,
     };
-    console.log(recipe);
+
+    sendJSON(`${API_URL}`);
   } catch (error) {
     throw error;
   }
