@@ -146,17 +146,17 @@ export const uploadRecipe = async function (newRecipe) {
         };
       });
     console.log(ingredients);
+    const recipe = {
+      title: newRecipe.title,
+      source_url: newRecipe.sourceURL,
+      image_url: newRecipe.image,
+      publisher: newRecipe.publisher,
+      cooking_time: +newRecipe.cookingTime,
+      servings: +newRecipe.servings,
+      ingredients,
+    };
+    console.log(recipe);
   } catch (error) {
     throw error;
   }
-
-  const recipe = {
-    title: newRecipe.title,
-    source_url: newRecipe.sourceURL,
-    image_url: newRecipe.image,
-    publisher: newRecipe.publisher,
-    cooking_time: +newRecipe.cookingTime,
-    servings: +newRecipe.servings,
-    ingredients,
-  };
 };
