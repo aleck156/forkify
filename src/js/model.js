@@ -1,5 +1,6 @@
 import { async } from 'regenerator-runtime';
 import { API_URL, RESULTS_PER_PAGE } from './config';
+import { API_KEYS } from './keys';
 import { getJSON, sendJSON } from './helpers.js';
 
 export const state = {
@@ -154,7 +155,8 @@ export const uploadRecipe = async function (newRecipe) {
       ingredients,
     };
 
-    sendJSON(`${API_URL}`);
+    const data = await sendJSON(`${API_URL}?key=${API_KEYS}`);
+    console.log(data);
   } catch (error) {
     throw error;
   }
