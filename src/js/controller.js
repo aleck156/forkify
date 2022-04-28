@@ -5,6 +5,7 @@ import resultsView from './views/resultsView';
 import paginationView from './views/paginationView';
 import bookmarksView from './views/bookmarksView';
 import addRecipeView from './views/addRecipeView';
+import { MODAL_CLOSE_SEC } from './config';
 
 import 'core-js';
 import 'regenerator-runtime/runtime';
@@ -111,7 +112,7 @@ const controlAddRecipe = async function (newRecipe) {
     // close form window
     setTimeout(function () {
       addRecipeView.toggleWindow();
-    }, 2500);
+    }, MODAL_CLOSE_SEC * 1000);
   } catch (error) {
     console.error(error);
     addRecipeView.renderError(error.message);
