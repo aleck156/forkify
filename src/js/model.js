@@ -129,7 +129,7 @@ const clearBookmarks = function () {
 // clearBookmarks();
 
 export const uploadRecipe = async function (newRecipe) {
-  // console.log(newRecipe);
+  console.log(newRecipe);
   try {
     const ingredients = Object.entries(newRecipe)
       .filter(entry => entry[0].startsWith('ingredient') && entry[1] !== '')
@@ -149,4 +149,14 @@ export const uploadRecipe = async function (newRecipe) {
   } catch (error) {
     throw error;
   }
+
+  const recipe = {
+    title: newRecipe.title,
+    source_url: newRecipe.sourceURL,
+    image_url: newRecipe.image,
+    publisher: newRecipe.publisher,
+    cooking_time: +newRecipe.cookingTime,
+    servings: +newRecipe.servings,
+    ingredients,
+  };
 };
