@@ -135,10 +135,10 @@ export const uploadRecipe = async function (newRecipe) {
     .map(ing => {
       const [quantity, unit, description] = ing[1].replace(' ', '').split(',');
       return {
-        quantity,
+        quantity: quantity ? +quantity : null,
         unit,
         description,
       };
     });
-  // console.log(ingredients);
+  console.log(ingredients);
 };
