@@ -31,6 +31,7 @@ class AddRecipeView extends View {
   _addHandlerCloseWindow() {
     this._btnClose.addEventListener('click', this.toggleWindow.bind(this));
     this._overlay.addEventListener('click', this.toggleWindow.bind(this));
+    this._btnUpload.addEventListener('click', this.toggleWindow.bind(this));
   }
 
   addHandlerUpload(handler) {
