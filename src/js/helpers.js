@@ -34,6 +34,7 @@ export const AJAX = async function (url, uploadData = undefined) {
   }
 };
 
+/*
 export const getJSON = async function (url) {
   try {
     const res = await Promise.race([fetch(url), timeout(TIMEOUT_SECONDS)]);
@@ -71,3 +72,5 @@ export const sendJSON = async function (url, uploadData) {
     throw error;
   }
 };
+
+*/
