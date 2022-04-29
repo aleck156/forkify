@@ -120,6 +120,7 @@ const controlAddRecipe = async function (newRecipe) {
 
     // change ID in the url
     window.history.pushState(null, '', `#${model.state.recipe.id}`);
+    window.history.back();
 
     // close form window
     setTimeout(function () {
