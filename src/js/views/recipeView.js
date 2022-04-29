@@ -84,16 +84,16 @@ class RecipeView extends View {
           </div>
 
           <div class="recipe__user-generated">
-          </div>
-
-          <button class="btn--round btn--bookmark">
-            <svg class="">
-              <use href="${icons}#icon-bookmark${
-      this._data.bookmarked ? '-fill' : ''
-    }"></use>
-            </svg>
-          </button>
+          <svg>
+            <use href="src/img/icons.svg#icon-user"></use>
+          </svg>
         </div>
+        <button class="btn--round">
+          <svg class="">
+            <use href="src/img/icons.svg#icon-bookmark-fill"></use>
+          </svg>
+        </button>
+      </div>
 
         <div class="recipe__ingredients">
           <h2 class="heading--2">Recipe ingredients</h2>
